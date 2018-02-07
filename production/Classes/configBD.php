@@ -3,6 +3,6 @@
 $host = "localhost";
 $dbname = "aprendendo";
 $dbuser = "root";
-$dbpass = "";
+$dbpass = "abc123";
 
 ?>
