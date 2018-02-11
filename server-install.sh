@@ -6,6 +6,9 @@
 echo "Updating apt"
 sudo apt-get -y update > /dev/null
 
+echo "Installing the tools"
+sudo apt-get -y install whois traceroute > /dev/null
+
 echo "Installing Apache"
 sudo apt-get -y install apache2 > /dev/null
 
