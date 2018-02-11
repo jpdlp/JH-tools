@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "aprendendo";
+$dbname = "cadastro";
 $dbuser = "root";
 $dbpass = "abc123";
 
