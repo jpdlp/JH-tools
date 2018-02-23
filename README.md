@@ -1,5 +1,19 @@
 # JH-tools
-O JH-tools é uma interface Web para um conjunto de ferramentas de análise de redes de computadores.
+O JH-tools é uma interface Web para um conjunto de ferramentas para análise de redes de computadores. Para utilizar os serviços, o usuário deverá realizar um cadastro prévio.
+
+Desenvolvido por:
+
+- [João Paulo](https://duckduckgo.com/)
+- [José Hermano](https://www.yandex.com)
+
+### Pré-requisitos
+
+Para o funcionamento do projeto, o usuário deverá ter instalado no seu sistema as ferramentas abaixo:
+
+- [Vagrant](https://www.vagrantup.com)
+- [VirtualBox](https://www.virtualbox.org/)
+
+
 
 ## Ferramentas utilizadas:
   * IPinfo
