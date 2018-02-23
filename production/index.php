@@ -66,7 +66,7 @@ session_start();
                     <ul class="nav child_menu">
                       <li><a href="ipinfo.php">IP INFO</a></li>
                       <li><a href="traceroute.php">TRACEROUTE</a></li>
-                      <li><a href="portscanner.php">PORT SCANNER</a></li>
+                      <!-- <li><a href="portscanner.php">PORT SCANNER</a></li> -->
                     </ul>
                   </li>
                   <li><a><i class="fa fa-group"></i> Gerenciamento <span class="fa fa-chevron-down"></span></a>

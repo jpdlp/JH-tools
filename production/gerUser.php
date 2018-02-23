@@ -6,7 +6,7 @@ require 'Classes/cadastrarClass.php';
 session_start();
 
   if (empty($_SESSION["login"])) {
-    header("Location: login.php");    
+    header("Location: login.php");
   }
 
 
@@ -67,15 +67,15 @@ session_start();
                     <ul class="nav child_menu">
                       <li><a href="ipinfo.php">IP INFO</a></li>
                       <li><a href="traceroute.php">TRACEROUTE</a></li>
-                      <li><a href="portscanner.php">PORT SCANNER</a></li>
+                      <!-- <li><a href="portscanner.php">PORT SCANNER</a></li> -->
                     </ul>
-                  </li> 
+                  </li>
                   <li><a><i class="fa fa-group"></i> Gerenciamento <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="gerUser.php">Gerenciar Usuarios</a></li>
                     </ul>
-                  </li>                                 
-              </div>         
+                  </li>
+              </div>
             </div>
             <!-- /sidebar menu -->
 
@@ -142,7 +142,7 @@ session_start();
                           Bem vindo ao IF NET-Tools
                         </span>
                       </a>
-                    </li>             
+                    </li>
 
                     <li>
                       <div class="text-center">
@@ -201,17 +201,17 @@ session_start();
                             echo  "<div class=\"alert alert-danger\" role=\"alert\">";
                             echo "Você precisa ser Administrador para acessa esta pagina.";
                             echo "</div>";
-                          
+
                         }else{
-                            echo  "<div class=\"col-md-2 col-sm-4 col-xs-6 tile_stats_count\">"; 
+                            echo  "<div class=\"col-md-2 col-sm-4 col-xs-6 tile_stats_count\">";
                             echo "<span class=count_top><i class=\"fa fa-user\"></i> Usuarios Cadastrados</span>";
                             echo "<div class=count style=text-align:center;>";
                             $bd = new BancoDeDados($host, $dbname,$dbuser, $dbpass);
                             $bd->qtdUsers();
-                            echo "</div>";                                               
+                            echo "</div>";
                             echo "</div>";
                           }
-                    ?>     
+                    ?>
 
                     <table class="table table-bordered">
                       <thead>
@@ -229,7 +229,7 @@ session_start();
                       $bd->exibirUsers();
                       ?>
                       </tbody>
-                    </table>             
+                    </table>
                       </div>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ session_start();
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    
+
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
   </body>
