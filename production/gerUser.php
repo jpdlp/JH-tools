@@ -46,7 +46,7 @@ session_start();
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.png" alt="..." class="img-circle profile_img">
+                <img src="images/user.png" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bem Vindo,</span>
@@ -109,7 +109,7 @@ session_start();
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.png" alt=""><?php echo $_SESSION["login"]; ?>
+                    <img src="images/user.png" alt=""><?php echo $_SESSION["login"]; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -133,7 +133,7 @@ session_start();
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
                       <a>
-                        <span class="image"><img src="images/img.png" alt="Profile Image" /></span>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
                         <span>
                           <span>Administrador</span>
                           <span class="time">3 mins ago</span>
