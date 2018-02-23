@@ -2,7 +2,7 @@
 session_start();
 
   if (empty($_SESSION["login"])) {
-    header("Location: login.php");    
+    header("Location: login.php");
   }
 
 ?>
@@ -14,7 +14,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>IFPB! | </title>
+    <title>JH-tools | Portscanner </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@ session_start();
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
 
-    
+
   </head>
 
   <style>
@@ -100,8 +100,8 @@ session_start();
                     <ul class="nav child_menu">
                       <li><a href="gerUser.php">Gerenciar Usuarios</a></li>
                     </ul>
-                  </li>                                   
-              </div>         
+                  </li>
+              </div>
             </div>
             <!-- /sidebar menu -->
 
@@ -168,7 +168,7 @@ session_start();
                           Bem vindo ao Sistema de Gerenciamento de Usuarios - IFPB
                         </span>
                       </a>
-                    </li>             
+                    </li>
 
                     <li>
                       <div class="text-center">
@@ -241,34 +241,34 @@ session_start();
                         <table class="table"><tr>
                             <thead class="thead-light">
                                 <th>PORT</th>
-                                <th>Servico</th>  
+                                <th>Servico</th>
                                 <th>Status</th>
-                
-                
+
+
                 <?php
-                
+
                 if (isset($_POST["site"]) && !empty($_POST["site"])) {
-                
+
                 $api = "405ad2c0f224b3ac6136eaf20a6ade507145afe9";
                 $ip =  $_POST["site"];
-                
+
                 $json = file_get_contents("https://api.viewdns.info/portscan/?host=".$ip."&apikey=".$api."&output=json");
                 $json = json_decode($json);
-                
+
                 //echo "Dominio:" .$json->query->domain."<br>";
                 //echo "Retornou: " .count($json->response->hops)."<br>";
-                
+
                 foreach ($json->response->port as $item) {
-                      
+
                     echo "<tr><td>" .$item->number."</td>";
                     echo "<td>" .$item->service."</td>";
-                
+
                     if ($item->status == "open") {
                         echo "<td style=color:green;>" .$item->status;
                       }else {
-                        echo "<td style=color:red;>" .$item->status;        
+                        echo "<td style=color:red;>" .$item->status;
                       }
-                
+
                     }
                 }
                 ?>
@@ -279,7 +279,7 @@ session_start();
   </div>
 </div>
 </div>
-                        
+
                   </div>
                 </div>
               </div>
@@ -304,7 +304,7 @@ session_start();
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    
+
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
   </body>

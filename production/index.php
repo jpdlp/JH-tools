@@ -138,7 +138,7 @@ session_start();
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
-                          Bem vindo ao IF NET-Tools
+                          Bem vindo ao JH-tools
                         </span>
                       </a>
                     </li>

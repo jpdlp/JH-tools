@@ -23,8 +23,25 @@
   </head>
 
   <style>
+    .logo {
+      width: 60%;
+    }
 
+    .login_wrapper {
+      margin-top: 5px;
+    }
 
+    .login_content {
+      padding-top: 0;
+    }
+
+    .aler, .alert-danger {
+      margin-bottom: 0;
+    }
+
+    .login_content form {
+      margin-top: 0;
+    }
   </style>
 
   <body class="login">
@@ -34,6 +51,24 @@
 
       <div class="login_wrapper">
         <div class="animate form login_form">
+          <div align="center">
+            <img class="logo" src="images/jh-tools.png" alt="">
+          </div>
+          <div style = "width:100%;margin: 0 auto;text-align:center;">
+            <?php
+            require 'Classes/configBD.php';
+            require 'Classes/cadastrarClass.php';
+
+            if (isset($_POST["user"]) && isset($_POST["senha"]) ) {
+
+              $login = $_POST["user"];
+              $senha = $_POST["senha"];
+
+              $bd = new BancoDeDados($host, $dbname,$dbuser, $dbpass);
+              $bd->Logar($login,$senha);
+            }
+            ?>
+          </div>
           <section class="login_content"></br></br>
               <form action="" method="post">
                 <h1>Entrar</h1>
@@ -97,21 +132,3 @@
     </div>
   </body>
 </html>
-
-<div style = "width:25%;margin:auto;text-align:center;">
-<?php
-require 'Classes/configBD.php';
-require 'Classes/cadastrarClass.php';
-
-if (isset($_POST["user"]) && isset($_POST["senha"]) ) {
-
-  $login = $_POST["user"];
-  $senha = $_POST["senha"];
-
-  $bd = new BancoDeDados($host, $dbname,$dbuser, $dbpass);
-  $bd->Logar($login,$senha);
-
-}
-
-?>
-</div>

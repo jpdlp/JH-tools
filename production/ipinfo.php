@@ -167,7 +167,7 @@ session_start();
                           <span class="time">3 mins ago</span>
                         </span>
                         <span class="message">
-                          Bem vindo ao Sistema de Gerenciamento de Usuarios - IFPB
+                          Bem vindo ao JH-tools
                         </span>
                       </a>
                     </li>
