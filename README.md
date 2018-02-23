@@ -1,4 +1,4 @@
-# JH-tools
+# JH-tools ![logo](production/images/jh-tools-logo.png)
 O JH-tools é uma interface Web para um conjunto de ferramentas para análise de redes de computadores. Para utilizar os serviços, o usuário deverá realizar um cadastro prévio.
 
 Desenvolvido por:
