@@ -2,7 +2,7 @@
 session_start();
 
   if (empty($_SESSION["login"])) {
-    header("Location: login.php");    
+    header("Location: login.php");
   }
 
 ?>
@@ -14,7 +14,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>IFPB! | </title>
+    <title>JH-tools | IPinfo</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@ session_start();
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
 
-    
+
   </head>
 
   <style>
@@ -66,7 +66,7 @@ session_start();
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-               <a href="index.php" class="site_title"><i class="fa fa-desktop"></i> <span>IF NET-Tools</span></a>
+               <a href="index.php" class="site_title"><i class="fa fa-desktop"></i> <span>JH-tools</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -97,13 +97,13 @@ session_start();
                       <li><a href="traceroute.php">TRACEROUTE</a></li>
                       <li><a href="portscanner.php">PORT SCANNER</a></li>
                     </ul>
-                  </li> 
+                  </li>
                   <li><a><i class="fa fa-group"></i> Gerenciamento <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="gerUser.php">Gerenciar Usuarios</a></li>
                     </ul>
-                  </li>                                  
-              </div>         
+                  </li>
+              </div>
             </div>
             <!-- /sidebar menu -->
 
@@ -170,7 +170,7 @@ session_start();
                           Bem vindo ao Sistema de Gerenciamento de Usuarios - IFPB
                         </span>
                       </a>
-                    </li>             
+                    </li>
 
                     <li>
                       <div class="text-center">
@@ -223,23 +223,23 @@ session_start();
                   </div>
                   <div class="x_content">
                     <script>
-                        
+
                           function pegarDados(){
                             $('#result').show("slow");
                             let ip = document.querySelector('#ip').value
                             let ipAddr = 'http://ip-api.com/json/' + ip
-                        
+
                             fetch(ipAddr)
                             .then(resposta => resposta.json())
                             .then(function(dados){
-                        
+
                              document.querySelector('.ipR').innerHTML = dados.query
                              document.querySelector('.empR').innerHTML = dados.org
                              document.querySelector('.paisR').innerHTML = dados.country
-                        
+
                           })
                         }
-                        
+
                         </script>
                           <div class="container" style="margin-left:20%;">
                             <div class="row justify-content-center">
@@ -254,10 +254,10 @@ session_start();
                               </div>
                             </div>
                           </div>
-                        
+
                           <div class="row justify-content-center">
                             <div class="card col-md-6" id="result">
-                        
+
                               <table class="table">
                                 <tr>
                                   <thead class="thead-light">
@@ -277,11 +277,11 @@ session_start();
                           </div>
                         </div>
                         </div>
-                        
+
                         <script>
                          $('#result').hide();
                         </script>
-                        
+
                   </div>
                 </div>
               </div>
@@ -306,7 +306,7 @@ session_start();
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    
+
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
   </body>

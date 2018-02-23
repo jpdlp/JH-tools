@@ -6,7 +6,7 @@ require 'Classes/cadastrarClass.php';
 session_start();
 
   if (empty($_SESSION["login"])) {
-    header("Location: login.php");    
+    header("Location: login.php");
   }
 
 ?>
@@ -18,7 +18,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Network | Tools </title>
+    <title>JH-tools </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,7 @@ session_start();
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-desktop"></i> <span>IF NET-Tools</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-desktop"></i> <span>JH-tools</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -68,13 +68,13 @@ session_start();
                       <li><a href="traceroute.php">TRACEROUTE</a></li>
                       <li><a href="portscanner.php">PORT SCANNER</a></li>
                     </ul>
-                  </li> 
+                  </li>
                   <li><a><i class="fa fa-group"></i> Gerenciamento <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="gerUser.php">Gerenciar Usuarios</a></li>
                     </ul>
-                  </li>                                 
-              </div>         
+                  </li>
+              </div>
             </div>
             <!-- /sidebar menu -->
 
@@ -141,7 +141,7 @@ session_start();
                           Bem vindo ao IF NET-Tools
                         </span>
                       </a>
-                    </li>             
+                    </li>
 
                     <li>
                       <div class="text-center">
@@ -197,8 +197,8 @@ session_start();
                     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                       <span class="count_top"><i class="fa fa-user"></i> Usuarios Cadastrados</span>
                       <div class="count" style="text-align:center;">
-                      <?php 
-                        $bd = new BancoDeDados($host, $dbname,$dbuser, $dbpass);                        
+                      <?php
+                        $bd = new BancoDeDados($host, $dbname,$dbuser, $dbpass);
                         $bd->qtdUsers();
                       ?>
                       </div>
@@ -225,7 +225,7 @@ session_start();
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    
+
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
   </body>

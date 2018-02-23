@@ -2,7 +2,7 @@
 session_start();
 
   if (empty($_SESSION["login"])) {
-    header("Location: login.php");    
+    header("Location: login.php");
   }
 
 ?>
@@ -14,7 +14,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>IFPB! | </title>
+    <title>JH-tools | Traceroute</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@ session_start();
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
 
-    
+
   </head>
 
   <style>
@@ -64,7 +64,7 @@ session_start();
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-               <a href="index.php" class="site_title"><i class="fa fa-desktop"></i> <span>IF NET-Tools</span></a>
+               <a href="index.php" class="site_title"><i class="fa fa-desktop"></i> <span>JH-tools</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -95,13 +95,13 @@ session_start();
                       <li><a href="traceroute.php">TRACEROUTE</a></li>
                       <li><a href="portscanner.php">PORT SCANNER</a></li>
                       </ul>
-                  </li> 
+                  </li>
                   <li><a><i class="fa fa-group"></i> Gerenciamento <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="gerUser.php">Gerenciar Usuarios</a></li>
                     </ul>
-                  </li>                                  
-              </div>         
+                  </li>
+              </div>
             </div>
             <!-- /sidebar menu -->
 
@@ -168,7 +168,7 @@ session_start();
                           Bem vindo ao Sistema de Gerenciamento de Usuarios - IFPB
                         </span>
                       </a>
-                    </li>             
+                    </li>
 
                     <li>
                       <div class="text-center">
@@ -244,31 +244,31 @@ session_start();
                             <th>Hostname</th>
                             <th>IP</th>
                             <th>RTT</th>
-                      
+
                 <?php
-                
+
                 if (isset($_POST["site"]) && !empty($_POST["site"])) {
-                
+
                 $api = "405ad2c0f224b3ac6136eaf20a6ade507145afe9";
                 $ip =  $_POST["site"];
-                
+
                 $json = file_get_contents("https://api.viewdns.info/traceroute/?domain=".$ip."&apikey=".$api."&output=json");
                 $json = json_decode($json);
-                
+
                 //echo "Dominio:" .$json->query->domain."<br>";
                 //echo "Retornou: " .count($json->response->hops)."<br>";
-                
+
                 foreach ($json->response->hops as $item) {
-                     
+
                     echo "<tr><td>" .$item->number."</td>";
                     echo "<td>" .$item->hostname."</td>";
                     echo "<td>" .$item->ip."</td>";
                     echo "<td>" .$item->rtt."</td></tr>";
-                
+
                  }
                 }
                 ?>
-                
+
                 </tr></table>
 
 </p>
@@ -276,7 +276,7 @@ session_start();
   </div>
 </div>
 </div>
-                        
+
                   </div>
                 </div>
               </div>
@@ -301,7 +301,7 @@ session_start();
     <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="../vendors/nprogress/nprogress.js"></script>
-    
+
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
   </body>
