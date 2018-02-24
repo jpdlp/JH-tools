@@ -235,6 +235,8 @@ session_start();
 
                              document.querySelector('.ipR').innerHTML = dados.query
                              document.querySelector('.empR').innerHTML = dados.org
+                             document.querySelector('.regiaoR').innerHTML = dados.regionName
+                             document.querySelector('.cidadeR').innerHTML = dados.city
                              document.querySelector('.paisR').innerHTML = dados.country
 
                           })
@@ -262,13 +264,17 @@ session_start();
                                 <tr>
                                   <thead class="thead-light">
                                   <th>IP-Addres</th>
-                                  <th>Empresa</th>
+                                  <th>Organizacao</th>
+                                  <th>Regiao</th>
+                                  <th>Cidade</th>
                                   <th>Pais</th>
                                   <thead>
                                 </tr>
                                 <tr>
                                   <td class="ipR"></td>
                                   <td class="empR"></td>
+                                  <td class="regiaoR"></td>
+                                  <td class="cidadeR"></td>
                                   <td class="paisR"></td>
                                 </tr>
                               </table>
