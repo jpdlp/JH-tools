@@ -54,18 +54,20 @@ Em caso de sucesso...
 
 ```js
 {
-  "status":       "success"
-  "domain":       "ifpb.edu.br"
-  "owner":        "INSTITUTO FEDERAL DE EDUCAÇÃO DA PARAÍBA"
-  "responsible":  "Pablo Andrey Arruda de Araujo"
-  "country":      "BR"
-  "nserver1":     "ns1.ifpb.edu.br 200.129.77.3"
-  "nserver2":     "ns2.ifpb.edu.br 200.129.79.28"
-  "person":       "Administrador Centro Federal"
-  "e-mail":       "administrador@ifpb.edu.br"
-  "created":      "16/12/2008"
-  "changed":      "22/09/2017"
-
+  "as": "AS1916 Associação Rede Nacional de Ensino e Pesquisa",
+  "city": "João Pessoa",
+  "country": "Brazil",
+  "countryCode": "BR",
+  "isp": "Associação Rede Nacional de Ensino e Pesquisa",
+  "lat": -7.1237,
+  "lon": -34.8656,
+  "org": "Associação Rede Nacional de Ensino e Pesquisa",
+  "query": "200.129.79.50",
+  "region": "PB",
+  "regionName": "Paraíba",
+  "status": "success",
+  "timezone": "America/Fortaleza",
+  "zip": ""
 }
 ```
 
